@@ -24,7 +24,7 @@ function LocationSection() {
     <section id="location" className="bg-blue-50 py-10 sm:py-16 lg:py-4">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="mb-8 text-center sm:mb-10 lg:mb-12">
+        <div className="mb-8 flex flex-col items-center text-center sm:mb-10 lg:mb-12">
           <Badge>Lokasi Kami</Badge>
           <Heading
             as="h2"
@@ -33,7 +33,7 @@ function LocationSection() {
           >
             Temukan Lokasi Brewclean.shoes
           </Heading>
-          <p className="mx-auto mt-2 max-w-xl text-xs sm:text-sm text-slate-500">
+          <p className="mx-auto mt-2 text-center max-w-xl text-xs sm:text-sm text-slate-500">
             Kunjungi workshop kami untuk perawatan sepatu terbaik Anda.
           </p>
         </div>
