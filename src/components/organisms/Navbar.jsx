@@ -17,6 +17,7 @@ const whatsappUrl = "https://wa.me/+6285117625687";
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeNav, setActiveNav] = useState("#home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +30,10 @@ function Navbar() {
   }, []);
 
   const closeMenu = () => setIsMenuOpen(false);
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
@@ -41,9 +45,12 @@ function Navbar() {
 
   const handleNavClick = (event, href) => {
     event.preventDefault();
+
+    setActiveNav(href);
     closeMenu();
 
     const target = document.querySelector(href);
+
     if (!target) return;
 
     const navbarHeight = 70;
@@ -92,22 +99,35 @@ function Navbar() {
             className="hidden h-full items-center xl:flex"
           >
             <ul className="flex h-full items-center gap-8">
-              {navigation.map((item, index) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    onClick={(event) => handleNavClick(event, item.href)}
-                    aria-current={index === 0 ? "page" : undefined}
-                    className={`relative inline-flex py-1.5 text-sm font-medium transition-colors duration-200 ${
-                      index === 0
-                        ? "text-[#1a4f8b] after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-full after:rounded-full after:bg-[#1a4f8b]"
-                        : "text-[#0b1a33] after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-0 after:rounded-full after:bg-[#1a4f8b] after:transition-all after:duration-200 hover:text-[#1a4f8b] hover:after:w-full"
-                    }`}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
+              {navigation.map((item) => {
+                const isActive = activeNav === item.href;
+
+                return (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      onClick={(event) => handleNavClick(event, item.href)}
+                      aria-current={isActive ? "page" : undefined}
+                      className={`group relative inline-flex py-1.5 text-sm font-medium transition-colors duration-200 ${
+                        isActive
+                          ? "text-[#1a4f8b]"
+                          : "text-[#0b1a33] hover:text-[#1a4f8b]"
+                      }`}
+                    >
+                      {item.label}
+
+                      {/* UNDERLINE */}
+                      <span
+                        className={`absolute bottom-0 left-1/2 h-[2.5px] w-full -translate-x-1/2 rounded-full bg-[#1a4f8b] transition-transform duration-300 ease-out ${
+                          isActive
+                            ? "scale-x-100"
+                            : "scale-x-0 group-hover:scale-x-100"
+                        }`}
+                      />
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
 
@@ -194,27 +214,32 @@ function Navbar() {
             </button>
           </div>
 
+          {/* MOBILE NAVIGATION */}
           <nav
             aria-label="Mobile navigation"
             className="flex-1 overflow-y-auto px-6 py-8"
           >
             <ul className="flex flex-col gap-2">
-              {navigation.map((item, index) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    onClick={(event) => handleNavClick(event, item.href)}
-                    aria-current={index === 0 ? "page" : undefined}
-                    className={`flex min-h-12 items-center rounded-lg px-4 text-base font-semibold transition-colors duration-150 ${
-                      index === 0
-                        ? "bg-[#eef3fa] text-[#1a4f8b]"
-                        : "text-[#0b1a33] hover:bg-[#eef3fa] hover:text-[#1a4f8b]"
-                    }`}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
+              {navigation.map((item) => {
+                const isActive = activeNav === item.href;
+
+                return (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      onClick={(event) => handleNavClick(event, item.href)}
+                      aria-current={isActive ? "page" : undefined}
+                      className={`relative flex min-h-12 items-center rounded-lg px-4 text-base font-semibold transition-colors duration-150 ${
+                        isActive
+                          ? "bg-[#eef3fa] text-[#1a4f8b]"
+                          : "text-[#0b1a33] hover:bg-[#eef3fa] hover:text-[#1a4f8b]"
+                      }`}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
         </aside>
