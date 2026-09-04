@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brewclean.shoescare.workers.dev/sitemap.xml
