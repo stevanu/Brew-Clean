@@ -59,7 +59,7 @@ function HeroSection() {
             id="hero-title"
             className="mt-4 text-3xl font-extrabold leading-[1.1] text-[#0b1a33] sm:text-4xl lg:text-[50px]"
           >
-            <span className="text-[#1a4f8b]">Sepatu Bersih</span>
+            <span className="text-[#1a4f8b]">Sepatu Bersih,</span>
 
             <br />
 
