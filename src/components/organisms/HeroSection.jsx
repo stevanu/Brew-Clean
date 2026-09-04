@@ -3,7 +3,7 @@ import { BadgeCheck, ShieldCheck, ShoppingBag, Truck } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
-import bgHero from "../../assets/images/bg/bg-home1.jpg";
+import bgHero from "../../assets/images/bg/bg-home1.webp";
 
 function HeroSection() {
   const features = [

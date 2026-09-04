@@ -1,4 +1,4 @@
-import bgAbout from "../../../assets/images/bg/bg-about1.jpg";
+import bgAbout from "../../../assets/images/bg/bg-about1.webp";
 
 function AboutImage() {
   return (

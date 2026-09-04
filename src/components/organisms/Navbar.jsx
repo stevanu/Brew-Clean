@@ -82,7 +82,7 @@ function Navbar() {
             className="flex shrink-0 items-center gap-2.5"
           >
             <img
-              src="/images/logo/brew-logo-nav.jpg"
+              src="/images/logo/brew-logo-nav.webp"
               alt="Brewclean.shoes Logo"
               className="h-15 w-15 rounded-full object-cover"
             />
@@ -191,7 +191,7 @@ function Navbar() {
               className="flex shrink-0 items-center gap-2.5"
             >
               <img
-                src="/images/logo/brew-logo-nav.jpg"
+                src="/images/logo/brew-logo-nav.webp"
                 alt="Brewclean.shoes Logo"
                 className="h-10 w-10 rounded-full object-cover"
               />

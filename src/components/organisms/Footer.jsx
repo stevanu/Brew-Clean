@@ -1,4 +1,6 @@
-import { Clock, MapPin, MessageCircle, Music2, Phone } from "lucide-react";
+import { Clock, MapPin, Phone, Mail } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faTiktok } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,21 +24,28 @@ function Footer() {
 
   const socialLinks = [
     {
+      name: "Instagram",
+      type: "fontawesome",
+      icon: faInstagram,
+      href: "https://instagram.com/brewclean.shoes",
+    },
+    {
       name: "TikTok",
-      icon: Music2,
+      type: "fontawesome",
+      icon: faTiktok,
       href: "https://tiktok.com/@brewclean.shoes",
     },
     {
-      name: "WhatsApp",
-      icon: MessageCircle,
-      href: "https://wa.me/+6285117625687",
+      name: "Email",
+      type: "lucide",
+      icon: Mail,
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=brewcleanshoes29@gmail.com",
     },
   ];
 
   return (
     <footer className="bg-blue-900 text-slate-300">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Main Content */}
         <div className="grid grid-cols-1 gap-8 py-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-2 lg:py-5">
           {/* Brand Info */}
           <div className="lg:col-span-2">
@@ -65,7 +74,7 @@ function Footer() {
             {/* Social Media Links */}
             <div className="mt-6 flex items-center gap-3">
               {socialLinks.map((social) => {
-                const Icon = social.icon;
+                const LucideIcon = social.icon;
                 return (
                   <a
                     key={social.name}
@@ -75,7 +84,11 @@ function Footer() {
                     aria-label={`Kunjungi ${social.name} Brewclean.shoes`}
                     className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-800/50 text-slate-300 transition-all duration-200 hover:border-blue-500 hover:bg-blue-600 hover:text-white"
                   >
-                    <Icon size={18} strokeWidth={1.8} />
+                    {social.type === "fontawesome" ? (
+                      <FontAwesomeIcon icon={social.icon} className="text-lg" />
+                    ) : (
+                      <LucideIcon size={18} strokeWidth={1.8} />
+                    )}
                   </a>
                 );
               })}
@@ -87,7 +100,7 @@ function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-wider text-white pb-5">
               Menu
             </h3>
-            <ul className="mt-4">
+            <ul className="mt-4 space-y-2">
               {menu.map((item) => (
                 <li key={item.label}>
                   <a
@@ -106,7 +119,7 @@ function Footer() {
             <h3 className="text-xs font-bold uppercase tracking-wider text-white pb-5">
               Layanan
             </h3>
-            <ul className="mt-2 space-y-1">
+            <ul className="mt-2 space-y-2">
               {services.map((item) => (
                 <li key={item.label}>
                   <a
@@ -154,7 +167,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar / Copyright */}
+        {/* Bottom Bar */}
         <div className="border-t border-slate-800 py-4 text-center">
           <p className="text-xs text-slate-400">
             © {currentYear} Brewclean.shoes. All Rights Reserved.
