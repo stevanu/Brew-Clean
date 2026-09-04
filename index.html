@@ -3,13 +3,24 @@
   <head>
     <meta charset="UTF-8" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/logo/Brew_logo.webp" />
+    <!-- =====================================================
+         BASIC
+    ====================================================== -->
 
-    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary SEO -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link rel="icon" type="image/png" href="/images/logo/Brew_logo.png" />
+
+    <!-- =====================================================
+         PRIMARY SEO
+    ====================================================== -->
+
     <title>
       Brewclean.shoes - Jasa Cuci Sepatu & Shoe Care Tangerang Selatan
     </title>
@@ -26,16 +37,15 @@
 
     <link rel="canonical" href="https://brewclean.shoescare.workers.dev/" />
 
-    <!-- Geographic SEO -->
-    <meta name="geo.region" content="ID-JB" />
-    <meta name="geo.placename" content="Tangerang Selatan" />
-    <meta name="geo.position" content="-6.2886;106.7179" />
-    <meta name="ICBM" content="-6.2886, 106.7179" />
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
 
     <meta property="og:locale" content="id_ID" />
+
+    <meta property="og:site_name" content="Brewclean.shoes" />
 
     <meta
       property="og:title"
@@ -44,7 +54,7 @@
 
     <meta
       property="og:description"
-      content="Jasa cuci dan perawatan sepatu di Pondok Aren, Tangerang Selatan. Fast Clean, Deep Clean, Hard Clean, dan Kids Shoes Clean."
+      content="Jasa cuci dan perawatan sepatu di Pondok Aren, Tangerang Selatan. Melayani Fast Clean, Deep Clean, Hard Clean, dan Kids Shoes Clean."
     />
 
     <meta
@@ -52,11 +62,9 @@
       content="https://brewclean.shoescare.workers.dev/"
     />
 
-    <meta property="og:site_name" content="Brewclean.shoes" />
-
     <meta
       property="og:image"
-      content="https://brewclean.shoescare.workers.dev/images/logo/Brew_logo.webp"
+      content="https://brewclean.shoescare.workers.dev/images/logo/Brew_logo.png"
     />
 
     <meta
@@ -64,7 +72,10 @@
       content="Brewclean.shoes - Jasa Cuci Sepatu"
     />
 
-    <!-- Twitter Card -->
+    <!-- =====================================================
+         TWITTER / X CARD
+    ====================================================== -->
+
     <meta name="twitter:card" content="summary_large_image" />
 
     <meta
@@ -82,13 +93,97 @@
       content="https://brewclean.shoescare.workers.dev/images/logo/Brew_logo.png"
     />
 
-    <!-- Theme -->
-    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="twitter:image:alt"
+      content="Brewclean.shoes - Jasa Cuci Sepatu"
+    />
+
+    <!-- =====================================================
+         LOCAL BUSINESS STRUCTURED DATA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://brewclean.shoescare.workers.dev/#business",
+
+        "name": "Brewclean.shoes",
+
+        "url": "https://brewclean.shoescare.workers.dev/",
+
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://brewclean.shoescare.workers.dev/images/logo/Brew_logo.png"
+        },
+
+        "image": [
+          "https://brewclean.shoescare.workers.dev/images/logo/Brew_logo.png"
+        ],
+
+        "description": "Brewclean.shoes menyediakan jasa cuci dan perawatan sepatu berbagai material di Pondok Aren, Tangerang Selatan.",
+
+        "priceRange": "Rp25.000 - Rp40.000",
+
+        "currenciesAccepted": "IDR",
+
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Puskesmas RT 02/011 Pondok Aren",
+          "addressLocality": "Tangerang Selatan",
+          "addressRegion": "Banten",
+          "addressCountry": "ID"
+        },
+
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Tangerang Selatan"
+          },
+          {
+            "@type": "Place",
+            "name": "Pondok Aren"
+          },
+          {
+            "@type": "Place",
+            "name": "Jabodetabek"
+          }
+        ],
+
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00",
+            "closes": "21:00"
+          }
+        ],
+
+        "serviceType": [
+          "Jasa Cuci Sepatu",
+          "Shoe Cleaning",
+          "Shoe Care",
+          "Fast Clean",
+          "Deep Clean",
+          "Hard Clean",
+          "Kids Shoes Clean"
+        ]
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
 
+    <!-- React -->
     <script type="module" src="/src/main.jsx"></script>
 
     <!-- Cloudflare Web Analytics -->
