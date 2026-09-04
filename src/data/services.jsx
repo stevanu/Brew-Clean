@@ -1,10 +1,4 @@
-import {
-  BadgeCheck,
-  WandSparkles,
-  BroomSparkles,
-  SportShoe,
-  Zap,
-} from "lucide-react";
+import { Clock3, SportShoe, ShieldCheck, Baby, Zap } from "lucide-react";
 
 export const services = [
   {
@@ -14,25 +8,25 @@ export const services = [
     price: "Rp30.000",
   },
   {
-    icon: SportShoe,
+    icon: ShieldCheck,
     name: "Deep Clean",
     duration: "2 - 3 hari",
     price: "Rp35.000",
   },
   {
-    icon: BroomSparkles,
+    icon: SportShoe,
     name: "Hard Clean",
     duration: "2 - 3 hari",
     price: "Rp40.000",
   },
   {
-    icon: WandSparkles,
+    icon: Baby,
     name: "Kids Shoes Clean",
     duration: "2 - 3 hari",
     price: "Rp25.000",
   },
   {
-    icon: BadgeCheck,
+    icon: Clock3,
     name: "Express",
     duration: "1 hari",
     price: "Rp45.000",
