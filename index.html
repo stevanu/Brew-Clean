@@ -24,13 +24,6 @@
     <title>
       Brewclean.shoes - Jasa Cuci Sepatu & Shoe Care Tangerang Selatan
     </title>
-    <!-- =====================================================
-         META VERIFICATION
-    ====================================================== -->
-    <meta
-      name="google-site-verification"
-      content="hEo2lJic9QnDgV-Lim65AZqmfG4zJogXRm1uLzsjnP0"
-    />
 
     <meta
       name="description"
@@ -43,6 +36,41 @@
     />
 
     <link rel="canonical" href="https://brewclean.shoescare.workers.dev/" />
+
+    <!-- =====================================================
+         GOOGLE SEARCH CONSOLE VERIFICATION
+    ====================================================== -->
+
+    <meta
+      name="google-site-verification"
+      content="hEo2lJic9QnDgV-Lim65AZqmfG4zJogXRm1uLzsjnP0"
+    />
+
+    <!-- =====================================================
+         GOOGLE ANALYTICS 4
+         
+         GANTI:
+         G-XXXXXXXXXX
+         
+         dengan Measurement ID Google Analytics kamu.
+    ====================================================== -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
 
     <!-- =====================================================
          OPEN GRAPH
@@ -190,15 +218,22 @@
   <body>
     <div id="root"></div>
 
-    <!-- React -->
+    <!-- =====================================================
+         REACT
+    ====================================================== -->
+
     <script type="module" src="/src/main.jsx"></script>
 
-    <!-- Cloudflare Web Analytics -->
+    <!-- =====================================================
+         CLOUDFLARE WEB ANALYTICS
+    ====================================================== -->
+
     <script
       type="module"
       src="https://static.cloudflareinsights.com/beacon.min.js"
       data-cf-beacon='{"token": "b4d0e53d044d446791cb2ad71aa7e797"}'
     ></script>
+
     <!-- End Cloudflare Web Analytics -->
   </body>
 </html>
