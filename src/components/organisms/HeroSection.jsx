@@ -59,22 +59,23 @@ function HeroSection() {
             id="hero-title"
             className="mt-4 text-3xl font-extrabold leading-[1.1] text-[#0b1a33] sm:text-4xl lg:text-[50px]"
           >
-            <span className="text-[#1a4f8b]">Jasa Cuci Sepatu</span>
+            <span className="text-[#1a4f8b]">Sepatu Bersih</span>
 
             <br />
 
-            <span>Tangerang Selatan</span>
+            <span>Langkah Jadi Percaya Diri</span>
           </h1>
 
           {/* DESCRIPTION */}
 
-          <p className="mt-4 max-w-135 text-[13px] font-normal leading-[1.8] text-[#4a5a72] lg:text-[14px]">
+          <p className="mt-7 max-w-135 text-[13px] font-normal leading-[1.8] text-[#4a5a72] lg:text-[14px]">
             <strong className="font-bold text-[#1a4f8b]">
               Brewclean.shoes
             </strong>{" "}
-            adalah jasa cuci dan perawatan sepatu di Pondok Aren, Tangerang
-            Selatan. Kami menangani berbagai jenis bahan sepatu dan noda
-            membandel dengan treatment yang disesuaikan dengan kondisi sepatu.
+            adalah penyedia jasa cuci dan perawatan sepatu profesional di Pondok
+            Aren, Tangerang Selatan. Kami melayani berbagai jenis bahan sepatu
+            dan siap mengatasi segala jenis noda membandel dengan metode
+            treatment khusus yang disesuaikan dengan kondisi sepatu Anda
           </p>
 
           {/* FEATURES */}
