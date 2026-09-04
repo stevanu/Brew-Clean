@@ -1,15 +1,9 @@
-import {
-  BadgeCheck,
-  HeartHandshake,
-  Pencil,
-  ShieldCheck,
-  Truck,
-} from "lucide-react";
+import { BadgeCheck, HeartHandshake, Pencil, Gem, Truck } from "lucide-react";
 
 export const advantages = [
   {
     id: 1,
-    icon: ShieldCheck,
+    icon: Gem,
     text: (
       <>
         Menggunakan produk & alat
